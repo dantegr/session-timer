@@ -1,38 +1,70 @@
+@import url("https://fonts.googleapis.com/css?family=Maven+Pro");
+
+* {
+  margin: 0;
+  padding: 0;
+  transition: 0.3s all ease;
+  box-sizing: border-box;
+  font-family: "Maven Pro", sans-serif;
+}
+
 .App {
+  height: 100vh;
+  width: 100%;
+  min-width: 800px;
+  background: #1f2023;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App.fade {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.3);
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App h1 {
+  margin-bottom: 2rem;
+  color: #fff;
+  position: relative;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #000, 0 0 30px #000,
+    0 0 40px #000, 0 0 55px #000, 0 0 75px #000;
+  letter-spacing: 4px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.App .countbox {
+  padding: 4rem 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  position: relative;
 }
 
-.App-link {
-  color: #61dafb;
+.App .countbox p {
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  padding: 2rem 0;
+  border-radius: 20px 0;
+  margin: 0 0.7rem;
+  width: 5rem;
+  font-size: 2.5rem;
+  text-align: center;
+  display: inline-block;
+  position: relative;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App .countbox p span {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0.2rem;
+  font-size: 0.8rem;
 }
